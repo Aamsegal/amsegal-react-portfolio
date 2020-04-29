@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import Introduction from './introduction/Introduction'
 import Projects from './Projects/Projects'
 import ContactInfo from './ContactInfo/ContactInfo'
+import theBlackDogCombat from './portfolioImages/theBlackDogCombat.png'
+import quizAppImage from './portfolioImages/quizAppImage.png'
+import recipyFinderImage from './portfolioImages/RecipeFinderDesktop.png'
+import ghubIcon from './portfolioImages/githubIcon.png'
+import linkedinIcon from './portfolioImages/linkedin-icon.png'
+import emailIcon from './portfolioImages/email-Icon.png'
 import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -21,6 +27,7 @@ class App extends Component {
 
         <header>
           <h1>Hi, I'm Aaron</h1>
+          <Link to = '/projectTest'>This is a test for links to things</Link>
         </header>
 
         <main>
@@ -68,7 +75,7 @@ class App extends Component {
           <Projects
             projectName = 'Web Quiz'
 
-            projectImage = 'https://i.gyazo.com/576dd3d34299c4c1f9d5e61831d290f1.png'
+            projectImage = {quizAppImage}
 
             projectImageAlt = 'Quiz website screenshot'
 
@@ -86,7 +93,7 @@ class App extends Component {
           <Projects
             projectName = 'Recipy Finder'
 
-            projectImage = 'https://raw.githubusercontent.com/Aamsegal/Recipe-Finder-API-Capstone/master/Recipe%20Finder%20Desktop%20Screenshot.png'
+            projectImage = {recipyFinderImage}
 
             projectImageAlt = 'Recipe website screenshot'
 
@@ -119,9 +126,9 @@ class App extends Component {
           <Projects
             projectName = "Depression Awareness Game"
 
-            projectImage = 'https://media.nationalharbor.com/wp-content/uploads/2014/10/26211757/the-black-dog-logo.jpg'
+            projectImage = {theBlackDogCombat}
 
-            projectImageAlt = 'Gameplay image'
+            projectImageAlt = "./portfolioImages/theBlackDogCombat.png"
 
             paragraph = {`As the lead for the project, I worked with 3 undergraduate students do develop a game to teach and
             raise awareness about depression. The player controls a character as they are taking a course about mental health. 
@@ -143,13 +150,13 @@ class App extends Component {
               <ContactInfo 
                 contactType = 'Linked In'
                 contactLink = 'https://www.linkedin.com/in/aaron-segal-427368143/'
-                contactTypeImage = 'http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png'
+                contactTypeImage = {linkedinIcon}
                 contactTypeAltImage = 'Linked in Logo' 
               />
 
               <ContactInfo 
                 contactType = "Github"
-                contactLink = 'https://github.com/Aamsegal'
+                contactLink = {ghubIcon}
                 contactTypeImage = 'https://maxcdn.icons8.com/Share/icon/p1em/Logos/github1600.png'
                 contactTypeAltImage = 'Github Logo'
               />
@@ -157,7 +164,7 @@ class App extends Component {
               <ContactInfo 
                 contactType = 'Email'
                 contactLink = 'mailto:amsegal93@gmail.com'
-                contactTypeImage = 'http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Mail-icon.png'
+                contactTypeImage = {emailIcon}
                 contactTypeAltImage = 'Email Icon'
               />
 

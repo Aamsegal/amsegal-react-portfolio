@@ -34,11 +34,7 @@ class Projects extends Component {
                 <img src={projectImage} alt={projectImageAlt}></img>
                 <p>{paragraph}</p>
                 {areThereLinks}
-                {/*<nav className = 'links'>
-                    <a target = "_blank" rel='noopener noreferrer' href={githubLink}>Github</a>
-                    <p>|</p>
-                    <a target = "_blank" rel='noopener noreferrer' href={demo}>Demo</a>
-                </nav>*/}
+                <p>Click here for more</p>
             </div>
         )
     }

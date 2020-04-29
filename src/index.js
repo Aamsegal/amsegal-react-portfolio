@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import ProjectExplanations from './ProjectExplanations/ProjectExplanations'
 import { BrowserRouter } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
 import './index.css';
 
 ReactDOM.render(
     <BrowserRouter>
-        <App />
+
+        <Route 
+            exact path='/'
+            component= {App}
+        />
+
+        <Route 
+            path = '/projectTest'
+            component = {ProjectExplanations}
+        />
+
     </BrowserRouter>, 
     document.getElementById('root')
 );
