@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 class Projects extends Component {
     render() {
-        const projectProps = this.props
         const demo = this.props.demo;
         const githubLink = this.props.githubLink;
         const paragraph = this.props.paragraph;
@@ -11,7 +10,18 @@ class Projects extends Component {
         const projectName = this.props.projectName;
 
         /*Setting the values for the props to use in this component*/
-        console.log(projectProps);
+
+        /*if (githubLink && demo === true) {
+            return
+            const linksHtml = (<nav className = 'links'>
+            <a target = "_blank" rel='noopener noreferrer' href={githubLink}>Github</a>
+            <p>|</p>
+            <a target = "_blank" rel='noopener noreferrer' href={demo}>Demo</a>
+            </nav>)
+        } else {
+            <h1>Testing if this works</h1>
+        }*/
+
         return (
             <div className = 'portfolioPiece'>
                 <h1>{projectName}</h1>

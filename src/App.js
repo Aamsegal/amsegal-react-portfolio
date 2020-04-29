@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Introduction from './introduction/Introduction'
 import Projects from './Projects/Projects'
+import ContactInfo from './ContactInfo/ContactInfo'
 import { Route, Link } from 'react-router-dom';
 
 class App extends Component {
@@ -24,17 +25,17 @@ class App extends Component {
 
         <main>
           <Introduction 
-          introLine1 = 'I like games, writing, cooking and dogs, all dogs.'
+            introLine1 = 'I like games, writing, cooking and dogs, all dogs.'
 
-          introLine2 = 'Above is one of my dogs, Chance. I love him very much.'
+            introLine2 = 'Above is one of my dogs, Chance. I love him very much.'
 
-          introLine3 = {`I have a lot of experience with HTML, CSS, Javascript, 
-          jQuery and React to the point where I sometimes think in those languages.`}
+            introLine3 = {`I have a lot of experience with HTML, CSS, Javascript, 
+            jQuery and React to the point where I sometimes think in those languages.`}
 
-          introLine4 ='I have worked on more group projects than I can remember, so working with people is both enjoyable, and second nature.'
+            introLine4 ='I have worked on more group projects than I can remember, so working with people is both enjoyable, and second nature.'
 
-          introLine5 = {`I want to design games to teach. I have experience teaching many different topics from martial arts to 3D modeling 
-          and love every second of it (well not grading). I make the games teach and grade for me.`}
+            introLine5 = {`I want to design games to teach. I have experience teaching many different topics from martial arts to 3D modeling 
+            and love every second of it (well not grading). I make the games teach and grade for me.`}
           />
           {/*Each of the line props sent down and used as a different list element for the introduction*/}
 
@@ -44,44 +45,88 @@ class App extends Component {
           path='/Project/:projectId'
           component={Projects}/>*/}
 
-          <Projects
-          projectName = 'Web Quiz'
+          <Projects 
+            projectName = 'This Website!'
 
-          projectImage = 'https://i.gyazo.com/576dd3d34299c4c1f9d5e61831d290f1.png'
+            projectImage = 'Placeholder'
 
-          projectImageAlt = 'Quiz website screenshot'
+            projectImageAlt = 'Image of this website. UPDATE THIS WHEN THE WEBSITE IS DONE CSS AND ALL'
 
-          paragraph = {`Animal quiz questions and answers are from a Javascript object. 
-          App keeps track of the users answers and gives them live feedback as to if the answer was right or wrong. (Skills: Html, Css, Javascript, Jquery)`}
-          
-          githubLink = 'https://github.com/Aamsegal/quizStartingPage'
+            paragraph = {`This porfolio webside was developed to display my skills and abilities in web development, game design and more. Pretty weird
+            talking about a website I made on the website itself but its a good example of my experience as a developer using different tools such as
+            developing a website using react. (Skills: Html, Css, Javascript, React framework)`}
 
-          demo = 'https://aamsegal.github.io/quizStartingPage/index.html'
+            githubLink = 'https://github.com/Aamsegal/amsegal-react-portfolio'
 
+            demo = 'https://github.com/Aamsegal/amsegal-react-portfolio'
           />
+
           {/*This called the project component and sends all the info for the project
           with props. Name, image, altImage, paragraph, githublink and the demo are
           all passed down and then used to create html based on the props*/}
 
+          <Projects
+            projectName = 'Web Quiz'
+
+            projectImage = 'https://i.gyazo.com/576dd3d34299c4c1f9d5e61831d290f1.png'
+
+            projectImageAlt = 'Quiz website screenshot'
+
+            paragraph = {`Animal quiz questions and answers are from a Javascript object. 
+            App keeps track of the users answers and gives them live feedback as to if the answer was right or wrong. (Skills: Html, Css, Javascript, Jquery)`}
+            
+            githubLink = 'https://github.com/Aamsegal/quizStartingPage'
+
+            demo = 'https://aamsegal.github.io/quizStartingPage/index.html'
+
+          />
+          
+
 
           <Projects
-          projectName = 'Recipy Finder'
+            projectName = 'Recipy Finder'
 
-          projectImage = 'https://raw.githubusercontent.com/Aamsegal/Recipe-Finder-API-Capstone/master/Recipe%20Finder%20Desktop%20Screenshot.png'
+            projectImage = 'https://raw.githubusercontent.com/Aamsegal/Recipe-Finder-API-Capstone/master/Recipe%20Finder%20Desktop%20Screenshot.png'
 
-          projectImageAlt = 'Recipe website screenshot'
+            projectImageAlt = 'Recipe website screenshot'
 
-          paragraph = {`Users can choose any food, choose dietary and health restrictions. Then the user can search through many recipes presented,
-          learning about their ingredients, nutrient values and a link to further cooking details.
-          (Skills: Html, Css, Javascript, JQuery, Ramda path function, which is used to prevent errors when a path cannot be found)`}
-          
-          githubLink = 'https://github.com/Aamsegal/Recipe-Finder-API-Capstone'
+            paragraph = {`Users can choose any food, choose dietary and health restrictions. Then the user can search through many recipes presented,
+            learning about their ingredients, nutrient values and a link to further cooking details.
+            (Skills: Html, Css, Javascript, JQuery, Ramda path function, which is used to prevent errors when a path cannot be found)`}
+            
+            githubLink = 'https://github.com/Aamsegal/Recipe-Finder-API-Capstone'
 
-          demo = 'https://aamsegal.github.io/Recipe-Finder-API-Capstone/'
+            demo = 'https://aamsegal.github.io/Recipe-Finder-API-Capstone/'
 
           />
 
-          
+          <div id = 'contact' className = 'contact'>
+            <h1>Contact</h1>
+            <nav id='icon-links' className = 'icon-links'>
+
+              <ContactInfo 
+                contactType = 'Linked In'
+                contactLink = 'https://www.linkedin.com/in/aaron-segal-427368143/'
+                contactTypeImage = 'http://icons.iconarchive.com/icons/danleech/simple/1024/linkedin-icon.png'
+                contactTypeAltImage = 'Linked in Logo' 
+              />
+
+              <ContactInfo 
+                contactType = "Github"
+                contactLink = 'https://github.com/Aamsegal'
+                contactTypeImage = 'https://maxcdn.icons8.com/Share/icon/p1em/Logos/github1600.png'
+                contactTypeAltImage = 'Github Logo'
+              />
+
+              <ContactInfo 
+                contactType = 'Email'
+                contactLink = 'mailto:amsegal93@gmail.com'
+                contactTypeImage = 'http://icons.iconarchive.com/icons/iynque/ios7-style/1024/Mail-icon.png'
+                contactTypeAltImage = 'Email Icon'
+              />
+
+            </nav>
+          </div>
 
         </main>
         {/*The main section will be where I have most of the contents of the portfolio. Projects,
