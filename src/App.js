@@ -100,6 +100,42 @@ class App extends Component {
 
           />
 
+          <Projects 
+            projectName = 'Escape Room'
+
+            projectImage = 'https://cohenwoodworking.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg'
+
+            projectImageAlt = 'Placeholder Image'
+
+            paragraph = {`Worked with a team of 10+ to design, create and run an escape room at our school for a weekend. I worked on 
+            three aspects of the escape room. I helped write the story, design and create the set and I was the lead on the puzzle team which
+            created fun and interactive puzzles that allowed the players to progress through the room.`}
+
+            githubLink = 'N/a'
+
+            demo = 'N/a'
+          />
+
+          <Projects
+            projectName = "Depression Awareness Game"
+
+            projectImage = 'https://media.nationalharbor.com/wp-content/uploads/2014/10/26211757/the-black-dog-logo.jpg'
+
+            projectImageAlt = 'Gameplay image'
+
+            paragraph = {`As the lead for the project, I worked with 3 undergraduate students do develop a game to teach and
+            raise awareness about depression. The player controls a character as they are taking a course about mental health. 
+            As they learn more, they need to apply what they learn in combat against a phisical manifestation of depression in
+            the game. They use moves to combat the enemies that are related to methods to help combat depression such as 
+            "papaya punch" for healthy eating or "Snooze" for the importance of the consistant sleep schedule.`}
+          
+            githubLink = 'N/a'
+
+            demo = 'N/a'
+          />
+
+          {/*In this situation, if both githubLink and demo link are N/a, the links wont render because of an if statement in the component*/}
+
           <div id = 'contact' className = 'contact'>
             <h1>Contact</h1>
             <nav id='icon-links' className = 'icon-links'>

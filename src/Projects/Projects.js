@@ -8,30 +8,37 @@ class Projects extends Component {
         const projectImage = this.props.projectImage;
         const projectImageAlt = this.props.projectImageAlt;
         const projectName = this.props.projectName;
-
         /*Setting the values for the props to use in this component*/
 
-        /*if (githubLink && demo === true) {
-            return
-            const linksHtml = (<nav className = 'links'>
-            <a target = "_blank" rel='noopener noreferrer' href={githubLink}>Github</a>
-            <p>|</p>
-            <a target = "_blank" rel='noopener noreferrer' href={demo}>Demo</a>
-            </nav>)
-        } else {
-            <h1>Testing if this works</h1>
-        }*/
+        let areThereLinks = (
+            <nav className = 'links'>
+                <a target = "_blank" rel='noopener noreferrer' href={githubLink}>Github</a>
+                <p>|</p>
+                <a target = "_blank" rel='noopener noreferrer' href={demo}>Demo</a>
+            </nav>
+        )
+        {/*As a base, are there links, which is called in the return html below, will present two links, one to the github repo
+        and one to the demo.*/}
+
+        if (githubLink && demo === 'N/a') {
+            
+            areThereLinks = (<h1>This Seems to work because its not working</h1>)
+
+        }
+
+        {/**/}
 
         return (
             <div className = 'portfolioPiece'>
                 <h1>{projectName}</h1>
                 <img src={projectImage} alt={projectImageAlt}></img>
                 <p>{paragraph}</p>
-                <nav className = 'links'>
+                {areThereLinks}
+                {/*<nav className = 'links'>
                     <a target = "_blank" rel='noopener noreferrer' href={githubLink}>Github</a>
                     <p>|</p>
                     <a target = "_blank" rel='noopener noreferrer' href={demo}>Demo</a>
-                </nav>
+                </nav>*/}
             </div>
         )
     }
