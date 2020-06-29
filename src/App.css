@@ -1,0 +1,60 @@
+.navbar{
+    position: relative;
+    background: #181818;
+    box-sizing: border-box;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-name {
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+    display: inline;
+    position: relative;
+    color: #ffffff;
+}
+
+@media screen and (min-width: 520px) and (max-width: 1024px) {
+    .navbar{
+        box-sizing: border-box;
+        position: fixed;
+        top: 0px;   
+    }
+
+    .navbar-name {
+        font-size: 25px;
+        left: 10%;
+        display: inline;
+    }
+
+    .navigation {
+        display: inline;
+        position: fixed;
+        right: 5%;
+    }
+
+    .navigation li {
+        display: inline;
+        padding-right: 15px;
+    }
+
+    .navbar a:visited {
+        color: rgb(191, 0, 255);
+    }
+
+    .main {
+        padding-top: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*Aligns the main section of the webpage to be sentered and only take up 80% of
+    of the width of the device*/
+
+    .main h1{
+        text-align: center;
+    }
+}
