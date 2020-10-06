@@ -1,0 +1,46 @@
+@media screen and (max-width: 519px) {
+    
+    .contact {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .contact_Section_Header {
+        margin-top: 0;
+    }
+
+    .contact_Link_Image {
+        width: 20%;
+        margin-left: 5%;
+     
+       margin-right: 5%;
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1025px) {
+
+    .contact {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .contact_Section_Header {
+        margin-top: 0;
+    }
+
+    .contact_Link_Image {
+        width: 20%;
+        margin-left: 5%;
+     
+       margin-right: 5%;
+    }
+
+}

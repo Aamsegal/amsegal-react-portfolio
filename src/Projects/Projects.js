@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
-import PorfolioContext from '../Context/PortfolioContext'
+import { v4 as uuidv4 } from 'uuid';
+import './Projects.css';
 
 class Projects extends Component {  
-    static contextType = PorfolioContext;
 
     state = {
         demo: this.props.demo,
@@ -13,58 +12,124 @@ class Projects extends Component {
         projectImageAlt: this.props.projectImageAlt,
         projectName: this.props.projectName,
         extraParagraph: this.props.testingExtraInfo,
+        extraImages: this.props.extraImages,
+        componentId: 'extraImagesContainer-' + uuidv4()
     }
     
     componentDidMount() {
-        const extraProjectInfo = this.state
-        this.context.setExtraInfo(extraProjectInfo);
-        console.log('This is the componnent did mount part')
-        console.log(this.context)
-    }
+        const extraImages = this.state.extraImages;
+        var extraImageHtml = '';
 
-    render() {
-        
-        //extraInfo = {Paragraph: this.props.testingExtraInfo};
+        if(typeof extraImages !== "undefined") {
 
-        const demo = this.props.demo;
-        const githubLink = this.props.githubLink;
-        const paragraph = this.props.paragraph;
-        const projectImage = this.props.projectImage;
-        const projectImageAlt = this.props.projectImageAlt;
-        const projectName = this.props.projectName;
-        const extraParagraph = this.props.testingExtraInfo;
+            for(let i = 0; i < extraImages.length; i++) {
 
-        //this.projectPlusInfo(extraParagraph);
-        /*Setting the values for the props to use in this component*/
-        
+                extraImageHtml += `<img class='secondary_Images' src='${extraImages[i].image}' alt='${extraImages[i].altText}' onclick="renderPhoto(this)"></img>`;
+            }
+               
+        } else {
 
-        let areThereLinks = (
-            <nav className = 'links'>
-                <a target = "_blank" rel='noopener noreferrer' href={githubLink}>Github</a>
-                <p>|</p>
-                <a target = "_blank" rel='noopener noreferrer' href={demo}>Demo</a>
-            </nav>
-        )
-        {/*As a base, are there links, which is called in the return html below, will present two links, one to the github repo
-        and one to the demo.*/}
-
-        if (typeof(githubLink) && typeof(demo) == 'undefined') {
-            
-            areThereLinks = (<h1>This Seems to work because its not working</h1>)
+            return
 
         }
 
-        {/**/}
+        
+        document.getElementById(this.state.componentId).innerHTML = extraImageHtml;
+
+    }
+
+    photoSelection() {
+        console.log('photoSelection is called')
+    }
+
+    checkForLinks = () => {
+        const githubLink = this.state.github;
+        const demo = this.state.demo;
+
+        //if neither the github link or the demo link exist return nothing
+        if (typeof githubLink === "undefined" && typeof demo === "undefined") {
+  
+            return
+        
+        //if both links exist it will return html for both
+        } else if(typeof githubLink !== "undefined" && typeof demo !== "undefined") {
+
+            return  <nav className='projects_Links_container'>
+                <a target='_blank' rel="noopener noreferrer" href={githubLink} className='project_link'>Repo</a>
+                <p className='divider_paragraph'>|</p>
+                <a target='_blank' rel="noopener noreferrer" href={demo} className='project_link'>Demo</a>
+            </nav>
+
+        //if the github link does not exist, return the html for the demo link
+        } else if (typeof githubLink !== "undefined") {
+
+            return <nav className="projects_Links_container">
+                <a target='_blank' rel="noopener noreferrer" href={githubLink} className='project_link'>Repo</a>
+            </nav>
+        
+        //if the demo link does not exist return the html for the repo link
+        } else if (typeof demo !== "undefined") {
+
+            return  <nav className="projects_Links_container">
+                <a target="_blank"  rel="noopener noreferrer" href={demo} className='project_link'>Demo</a>
+            </nav>
+        }
+
+    }
+
+    checkForImage = () => {
+        const image = this.state.projectImage;
+
+        if(typeof image !== "undefined") {
+
+            return <img className='portfolio_Piece_Image' src={this.state.projectImage} alt={this.state.projectImageAlt}></img>
+        
+        } else {
+
+            return
+
+        }
+    }
+
+    /*checkForExtraImages = () => {
+        const extraImages = this.state.extraImages;
+
+        var extraImageHtml = '';
+
+        if(typeof extraImages !== "undefined") {
+
+            for(let i = 0; i < extraImages.length; i++) {
+
+                extraImageHtml += `<img class='secondary_Images' src=${extraImages[i].image} alt=${extraImages[i].altText} onclick="${() => this.photoSelection(extraImages[i].image)}"></img>`;
+            }
+               
+        } else {
+
+            return
+
+        }
+
+
+        document.getElementById(this.state.componentId).innerHTML = extraImageHtml;
+    }*/
+
+    render() {
+
+        this.photoSelection();
 
         return (
-            <div className = 'portfolioPiece'>
-                <h1>{projectName}</h1>
-                <img src={projectImage} alt={projectImageAlt}></img>
-                <p>{paragraph}</p>
-                {areThereLinks}
-                <Link to={`/projectExplanation/${this.uniqueId}`}>
-                    Click here for more!
-                </Link>
+            <div className='portfolioPiece' id={this.props.projectName}>
+                <h2 className='portfolio_Piece_Name' >{this.state.projectName}</h2>
+
+                {this.checkForImage()}
+
+                <div className="extraImagesContainer" id={this.state.componentId}>
+                    
+                </div>
+
+                <p className='portfolio_Piece_Description' >{this.state.paragraph}</p>
+
+                {this.checkForLinks()}
             </div>
         )
     }

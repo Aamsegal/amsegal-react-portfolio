@@ -4,106 +4,106 @@ import ContactInfo from './ContactInfo/ContactInfo'
 import ghubIcon from './portfolioImages/githubIcon.png'
 import linkedinIcon from './portfolioImages/linkedin-icon.png'
 import emailIcon from './portfolioImages/email-Icon.png'
-import PorfolioContext from './Context/PortfolioContext'
-import { Route, Link } from 'react-router-dom';
+import Introduction from './introduction/Introduction.js';
+import { Link } from 'react-router-dom';
 import ProjectSection from './ProjectSection/ProjectSection'
-import ProjectExplanations from './ProjectExplanations/ProjectExplanations';
 
 
 
 class App extends Component {
 
-  state = {
-    extraInfo: [],
-  };
-
-  setExtraInfo = extraInfoData => {
-      
-    const currentState = this.state.extraInfo;
-    
-    currentState.push(extraInfoData);
-
-    
-    this.setState({
-      extraInfo: currentState,
-    })
-    //console.log(this.state.extraInfo);
+  hideExtraImageContainer() {
+    document.getElementById("extra-Photo-Enlarge-Blackout").style.display = "none";
   }
-
-  
 
   render() {
 
-    const contextValue = {
-      extraInfo: this.state.extraInfo,
-      setExtraInfo: this.setExtraInfo,
-    }
-
     return(
       <main className = "App">
-        <div className = 'navbar' id = 'navbar'>
-          <h1 className = 'navbar-name'>Aaron Segal</h1>
-            <ul className ="navigation">
-              {/*<li><a className="jumper" href="#Home">Home</a></li>*/}
-              <li><Link to = {'/'}>Home</Link></li>
-              <li><Link to = '/'>Projects</Link></li>
-              <li><Link to = '/'>Contact</Link></li>
-            </ul>
-          
+
+        <div id="extra-Photo-Enlarge-Blackout">
+
+          <div className="extra-Photo-Enlarge-Container">
+            
+            <div className="extra-Photo-Enlarge-Exit">
+              <button onClick={() => this.hideExtraImageContainer()}>X</button>
+            </div>
+            
+            <img id="extra-Photo-Enlarge-Image" src=''></img>
+          </div>
+            
         </div>
 
         {/*This is setting up the nav bar. Has my name at the top, and links to different parts of
         my portfolio on the right. Later, these links will be used to jump between sections in the
         portfolio*/}
-
-        <div className = 'main' id = 'main'>
-
-          <PorfolioContext.Provider value={contextValue}>
-
-            <Route
-              path = 'projects/projectId'
-              component = {ProjectExplanations}
-            />
-
-            <Route 
-              exact path='/'
-              component= {ProjectSection}
-            />
-
-          </PorfolioContext.Provider>   
-
-        <div id = 'contact' className = 'contact'>
-          <h1>Contact</h1>
-          <nav id='icon-links' className = 'icon-links'>
+        <div className='navbar'>
+          <h1 className = 'navbar-name'>Aaron Segal</h1>
+            <div className ="navbar-jumpers">
+              {/*<li><a className="jumper" href="#Home">Home</a></li>*/}
+              <a className="jumper" href="#Home" className="jumper-Link">Home</a>
+              <a className="jumper" href="#portfolio_Nav" className="jumper-Link">Projects</a>
+              <a className="jumper" href="#icon-links" className="jumper-Link">Contact</a>
+            </div>
           
-            <ContactInfo 
-              contactType = 'Linked In'
-              contactLink = 'https://www.linkedin.com/in/aaron-segal-427368143/'
-              contactTypeImage = {linkedinIcon}
-              contactTypeAltImage = 'Linked in Logo' 
-            />
-
-            <ContactInfo 
-              contactType = "Github"
-              contactLink = 'https://github.com/Aamsegal'
-              contactTypeImage = {ghubIcon}
-              contactTypeAltImage = 'Github Logo'
-            />
-
-            <ContactInfo 
-              contactType = 'Email'
-              contactLink = 'mailto:amsegal93@gmail.com'
-              contactTypeImage = {emailIcon}
-              contactTypeAltImage = 'Email Icon'
-            />
-
-          </nav>
         </div>
 
-        </div>
-        {/*The main section will be where I have most of the contents of the portfolio. Projects,
-        extra info, contact and more. There will be small little blurbs about each sectionand then 
-        a button to learn more for each one where I go more in depth about what I did. */}
+        
+        <nav id ='Home' className='Home'></nav>
+        <div className='main_content_container'>
+          
+          {/*Each of the line props sent down and used as a different list element for the introduction*/}
+          <Introduction 
+
+                  introLine1 = 'I like games, writing, cooking and dogs, all dogs.'
+
+                  introLine2 = 'Above is one of my dogs, Chance. I love him very much.'
+
+                  introLine3 = {`I have a lot of experience with HTML, CSS, Javascript, 
+                  jQuery and React to the point where I sometimes think in those languages.`}
+
+                  introLine4 ='I have worked on more group projects than I can remember, so working with people is both enjoyable, and second nature.'
+
+                  introLine5 = {`I want to design games to teach. I have experience teaching many different topics from martial arts to 3D modeling 
+                  and love every second of it (well not grading). I make the games teach and grade for me.`}
+              />
+              
+
+            
+            
+            <ProjectSection />
+
+            <div className = 'contact'>
+
+              <h1 className = "contact_Section_Header">Contact</h1>
+
+              <nav id='icon-links' className='icon-links'/>
+              
+                <ContactInfo 
+                  contactType = 'Linked In'
+                  contactLink = 'https://www.linkedin.com/in/aaron-segal-427368143/'
+                  contactTypeImage = {linkedinIcon}
+                  contactTypeAltImage = 'Linked in Logo' 
+                />
+
+                <ContactInfo 
+                  contactType = "Github"
+                  contactLink = 'https://github.com/Aamsegal'
+                  contactTypeImage = {ghubIcon}
+                  contactTypeAltImage = 'Github Logo'
+                />
+
+                <ContactInfo 
+                  contactType = 'Email'
+                  contactLink = 'mailto:amsegal93@gmail.com'
+                  contactTypeImage = {emailIcon}
+                  contactTypeAltImage = 'Email Icon'
+                />
+
+            </div>
+
+          </div>
+
       </main>
     )
   }

@@ -1,0 +1,152 @@
+.portfolio_Piece_Image {
+    width: 500px;
+}
+
+.secondary_Images {
+    width: 100px;
+}
+
+@media screen and (max-width: 519px) {
+    .portfolioPiece {
+        text-align: center;
+
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 2px solid black;
+        padding-bottom: 10px;
+    }
+
+    .portfolio_Piece_Name {
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    .portfolio_Piece_Image {
+        width: 80%;
+        text-align: center;
+    }
+
+    .portfolio_Piece_Description {
+        font-size: 16px;
+        text-align: left;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .project_link, .divider_paragraph {
+        display: inline;
+    }
+
+    .project_link {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .divider_paragraph {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .extraImagesContainer {
+        width: 100%;
+    }
+
+    .secondary_Images {
+        display: inline-block;
+        width: 23%;
+        margin: 1%
+    }
+}
+
+@media screen and (min-width: 520px) and (max-width: 1024px) {
+    .portfolioPiece {
+        text-align: center;
+
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 3px solid black;
+        padding-bottom: 10px;
+    }
+
+    .portfolio_Piece_Name {
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    .portfolio_Piece_Image {
+        width: 500px;
+        text-align: center;
+    }
+
+    .portfolio_Piece_Description {
+        font-size: 22px;
+        text-align: left;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .project_link, .divider_paragraph {
+        display: inline;
+    }
+
+    .project_link {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .divider_paragraph {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .portfolioPiece {
+        text-align: center;
+
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 3px solid black;
+        padding-bottom: 10px;
+    }
+
+    .portfolio_Piece_Name {
+        text-align: center;
+        font-size: 40px;
+        text-decoration: underline;
+    }
+
+    .portfolio_Piece_Image {
+        width: 500px;
+        text-align: center;
+    }
+
+    .portfolio_Piece_Description {
+        font-size: 22px;
+        text-align: left;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .project_link, .divider_paragraph {
+        display: inline;
+    }
+
+    .project_link {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .divider_paragraph {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}

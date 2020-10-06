@@ -5,7 +5,6 @@ class ProjectExplanations extends Component {
 
     render() {
         const extraInfo = this.context.extraInfo;
-        console.log(extraInfo)
         return (
             <Link to ='/'>This Should Link back to the main page</Link>
         )

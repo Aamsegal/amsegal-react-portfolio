@@ -1,0 +1,26 @@
+@media screen and (max-width: 519px) {
+    
+}
+
+@media screen and (min-width: 520px) and (max-width: 1024px) {
+    
+}
+
+@media screen and (min-width: 1025px) {
+    .introdunction {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .introLine_sentence_Container {
+        text-align: left;
+    }
+
+    .intro_sentence {
+        margin: 0;
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
