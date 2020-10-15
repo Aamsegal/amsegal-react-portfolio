@@ -39,7 +39,7 @@ class Projects extends Component {
     }
 
     photoSelection() {
-        console.log('photoSelection is called')
+
     }
 
     checkForLinks = () => {
@@ -91,31 +91,9 @@ class Projects extends Component {
         }
     }
 
-    /*checkForExtraImages = () => {
-        const extraImages = this.state.extraImages;
-
-        var extraImageHtml = '';
-
-        if(typeof extraImages !== "undefined") {
-
-            for(let i = 0; i < extraImages.length; i++) {
-
-                extraImageHtml += `<img class='secondary_Images' src=${extraImages[i].image} alt=${extraImages[i].altText} onclick="${() => this.photoSelection(extraImages[i].image)}"></img>`;
-            }
-               
-        } else {
-
-            return
-
-        }
-
-
-        document.getElementById(this.state.componentId).innerHTML = extraImageHtml;
-    }*/
-
     render() {
 
-        this.photoSelection();
+        //this.photoSelection();
 
         return (
             <div className='portfolioPiece' id={this.props.projectName}>

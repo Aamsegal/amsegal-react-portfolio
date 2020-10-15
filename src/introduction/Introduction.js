@@ -23,11 +23,15 @@ class Introduction extends Component {
         
 
         return (
-            <div className = 'introdunction'>
-                <h1 className='introHeader'>Hi, I'm Aaron</h1>
+            <div className = 'intro_container'>
 
-                <div className='introLine_sentence_Container' id='introLine_sentence_Container'></div>
+                <div className='intro_para_container'>
+                    <h1 className='introHeader'>Hi, I'm Aaron</h1>
 
+                    <div className='introLine_sentence_Container' id='introLine_sentence_Container'></div>
+
+                </div>
+                
             </div>
         )
     }

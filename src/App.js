@@ -5,7 +5,7 @@ import ghubIcon from './portfolioImages/githubIcon.png'
 import linkedinIcon from './portfolioImages/linkedin-icon.png'
 import emailIcon from './portfolioImages/email-Icon.png'
 import Introduction from './introduction/Introduction.js';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import ProjectSection from './ProjectSection/ProjectSection'
 
 
@@ -29,7 +29,7 @@ class App extends Component {
               <button onClick={() => this.hideExtraImageContainer()}>X</button>
             </div>
             
-            <img id="extra-Photo-Enlarge-Image" src=''></img>
+            <img id="extra-Photo-Enlarge-Image" alt="current enlarged"src=''></img>
           </div>
             
         </div>
@@ -41,9 +41,9 @@ class App extends Component {
           <h1 className = 'navbar-name'>Aaron Segal</h1>
             <div className ="navbar-jumpers">
               {/*<li><a className="jumper" href="#Home">Home</a></li>*/}
-              <a className="jumper" href="#Home" className="jumper-Link">Home</a>
-              <a className="jumper" href="#portfolio_Nav" className="jumper-Link">Projects</a>
-              <a className="jumper" href="#icon-links" className="jumper-Link">Contact</a>
+              <a href="#Home" className="jumper-Link">Home</a>
+              <a href="#portfolio_Nav" className="jumper-Link">Projects</a>
+              <a href="#icon-links" className="jumper-Link">Contact</a>
             </div>
           
         </div>
@@ -57,19 +57,13 @@ class App extends Component {
 
                   introLine1 = 'I like games, writing, cooking and dogs, all dogs.'
 
-                  introLine2 = 'Above is one of my dogs, Chance. I love him very much.'
+                  introLine2 = {`I have experience with HTML, CSS, Javascript, 
+                  React and Express to the point where I sometimes think in those languages.`}
 
-                  introLine3 = {`I have a lot of experience with HTML, CSS, Javascript, 
-                  jQuery and React to the point where I sometimes think in those languages.`}
+                  introLine3 ='I have worked on more group projects than I can remember, so working with people is both enjoyable, and second nature.'
 
-                  introLine4 ='I have worked on more group projects than I can remember, so working with people is both enjoyable, and second nature.'
-
-                  introLine5 = {`I want to design games to teach. I have experience teaching many different topics from martial arts to 3D modeling 
-                  and love every second of it (well not grading). I make the games teach and grade for me.`}
+                  introLine4 = 'I want to design games to teach and one day I would like to combine those two loves together.'
               />
-              
-
-            
             
             <ProjectSection />
 
@@ -81,7 +75,7 @@ class App extends Component {
               
                 <ContactInfo 
                   contactType = 'Linked In'
-                  contactLink = 'https://www.linkedin.com/in/aaron-segal-427368143/'
+                  contactLink = 'https://www.linkedin.com/in/developeramsegal/'
                   contactTypeImage = {linkedinIcon}
                   contactTypeAltImage = 'Linked in Logo' 
                 />

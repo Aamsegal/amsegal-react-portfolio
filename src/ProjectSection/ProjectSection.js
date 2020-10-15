@@ -1,10 +1,13 @@
 import React , { Component } from 'react';
 import Projects from '../Projects/Projects';
+import './ProjectSection.css';
+
 import theBlackDogCombat from '../portfolioImages/theBlackDogCombat.png';
 import quizAppImage from '../portfolioImages/quizAppImage.png';
 import recipyFinderImage from '../portfolioImages/RecipeFinderDesktop.png';
 import monsterCreatorImage from '../portfolioImages/DnD_Monster Creator Image.png';
 import EscapeRoomImage1 from '../portfolioImages/Escape-Room-1.JPG';
+import stockDatabase from '../portfolioImages/Stock_Database.webp';
 
 /*Escape the room extra images*/
 import EscapeRoomImage2 from '../portfolioImages/Escape-Room-2.JPG';
@@ -21,18 +24,21 @@ class ProjectSection extends Component {
     render() {
 
         const escapeRoomExtraImages = [
-            {image: EscapeRoomImage2, altText: 'altText'},
-            {image: EscapeRoomImage3, altText: 'altText'},
-            {image: EscapeRoomImage4, altText: 'altText'},
-            {image: EscapeRoomImage5, altText: 'altText'}
+            {image: EscapeRoomImage2, altText: 'Yeti escape room crime scene 1'},
+            {image: EscapeRoomImage3, altText: 'Yeti escape room crime scene 2'},
+            {image: EscapeRoomImage4, altText: 'Yeti escape room crime scene 3'},
+            {image: EscapeRoomImage5, altText: 'Yeti escape room crime scene 4'}
         ]
 
         return(
             <div className='portfolioContainer'>
 
                 <nav id = "portfolio_Nav" />
-            
-                <h1 id = 'Portfolio'>Projects</h1>
+                
+                <div className='potfolio_header_container'>
+                    <h1 className='portfolio_header'>Projects</h1>
+                </div>
+               
 
                 <Projects
                     projectName = 'This Website!'
@@ -46,8 +52,6 @@ class ProjectSection extends Component {
                     developing a website using react. (Skills: Html, Css, Javascript, React framework)`}
 
                     githubLink = 'https://github.com/Aamsegal/amsegal-react-portfolio'
-
-                    demo = 'https://github.com/Aamsegal/amsegal-react-portfolio'
                 />
 
                 {/*This called the project component and sends all the info for the project
@@ -90,7 +94,11 @@ class ProjectSection extends Component {
 
                     projectImage = {monsterCreatorImage}
 
-                    paragraph = {`Placeholder paragraph`}
+                    projectImageAlt = 'Screenshot of the application'
+
+                    paragraph = {`This application allows people to create a Dnd Monster. The app provides suggested starting points and renders the stats in a 
+                    clean monster card for users to screen shot if they would like. Users can also create an acount and login to save monsters to access for future use.
+                    (Skills: Html, Css, Javascript, React.js)`}
 
                     githubLink = 'https://github.com/Aamsegal/Dnd-Monster-Creator'
 
@@ -100,7 +108,12 @@ class ProjectSection extends Component {
                 <Projects 
                     projectName = 'Dnd Monster Creator Server'
 
-                    paragraph = {`Placeholder Paragraph`}
+                    projectImage = {stockDatabase}
+
+                    projectImageAlt = 'Stock Database Photo'
+
+                    paragraph = {`The server for the monster creator has multiple end points for the monster power suggestion, the users, the monsters and monster moves.
+                    (Skills: Javascript, React.js, Express.js, PostgreSQL)`}
 
                     githubLink = 'https://github.com/Aamsegal/Dnd-Monster-Creator-Server'
                 />
