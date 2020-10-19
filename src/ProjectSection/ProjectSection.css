@@ -1,9 +1,37 @@
 @media screen and (max-width: 519px) {
-    
+    .potfolio_header_container {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-bottom: 3px solid black;
+        vertical-align: middle;
+        margin-bottom: 0px;
+    }
+
+    .portfolio_header {
+        font-size: 35px;
+        margin: 0;
+        padding-bottom: 0px;
+    }
 }
 
 @media screen and (min-width: 520px) and (max-width: 1024px) {
-    
+    .potfolio_header_container {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        border-bottom: 3px solid black;
+        vertical-align: middle;
+        margin-bottom: 0px;
+    }
+
+    .portfolio_header {
+        font-size: 35px;
+        margin: 0;
+        padding-bottom: 0px;
+    }
 }
 
 @media screen and (min-width: 1025px) {

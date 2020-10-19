@@ -8,6 +8,7 @@ import recipyFinderImage from '../portfolioImages/RecipeFinderDesktop.png';
 import monsterCreatorImage from '../portfolioImages/DnD_Monster Creator Image.png';
 import EscapeRoomImage1 from '../portfolioImages/Escape-Room-1.JPG';
 import stockDatabase from '../portfolioImages/Stock_Database.webp';
+import thisWebsite from '../portfolioImages/This_Website_Image.jpg';
 
 /*Escape the room extra images*/
 import EscapeRoomImage2 from '../portfolioImages/Escape-Room-2.JPG';
@@ -43,14 +44,16 @@ class ProjectSection extends Component {
                 <Projects
                     projectName = 'This Website!'
 
-                    projectImage = 'https://cohenwoodworking.com/wp-content/uploads/2016/09/image-placeholder-500x500.jpg'
+                    projectImage = {thisWebsite}
 
                     projectImageAlt = 'Image of this website. UPDATE THIS WHEN THE WEBSITE IS DONE CSS AND ALL'
 
-                    paragraph = {`This porfolio webside was developed to display my skills and abilities in web development, game design and more. Pretty weird
-                    talking about a website I made on the website itself but its a good example of my experience as a developer using different tools such as
-                    developing a website using react. (Skills: Html, Css, Javascript, React framework)`}
-
+                    paragraph = {`This webside is developed with React to create modular code that can easily be applied to add to the website. Modular componants accept a
+                    variety of different props and render differently depensing on which props are present. Pretty weird talking about a website I made 
+                    on the website itself but its a good example of my experience as a developer using different tools.`}
+                    
+                    skills = 'Html, Css, Javascript, React framework'
+                    
                     githubLink = 'https://github.com/Aamsegal/amsegal-react-portfolio'
                 />
 
@@ -66,7 +69,9 @@ class ProjectSection extends Component {
                     projectImageAlt = 'Quiz website screenshot'
 
                     paragraph = {`Animal quiz questions and answers are from a Javascript object. 
-                    App keeps track of the users answers and gives them live feedback as to if the answer was right or wrong. (Skills: Html, Css, Javascript, Jquery)`}
+                    App keeps track of the users answers and gives them live feedback as to if the answer was right or wrong.`}
+
+                    skills = 'Html, Css, Javascript, Jquery'
                     
                     githubLink = 'https://github.com/Aamsegal/quizStartingPage'
 
@@ -81,8 +86,9 @@ class ProjectSection extends Component {
                     projectImageAlt = 'Recipe website screenshot'
 
                     paragraph = {`Users can choose any food, choose dietary and health restrictions. Then the user can search through many recipes presented,
-                    learning about their ingredients, nutrient values and a link to further cooking details.
-                    (Skills: Html, Css, Javascript, JQuery, Ramda path function, which is used to prevent errors when a path cannot be found)`}
+                    learning about their ingredients, nutrient values and a link to further cooking details.`}
+
+                    skills = 'Html, Css, Javascript, JQuery'
                     
                     githubLink = 'https://github.com/Aamsegal/Recipe-Finder-API-Capstone'
 
@@ -97,8 +103,9 @@ class ProjectSection extends Component {
                     projectImageAlt = 'Screenshot of the application'
 
                     paragraph = {`This application allows people to create a Dnd Monster. The app provides suggested starting points and renders the stats in a 
-                    clean monster card for users to screen shot if they would like. Users can also create an acount and login to save monsters to access for future use.
-                    (Skills: Html, Css, Javascript, React.js)`}
+                    clean monster card for users to screen shot if they would like. Users can also create an acount and login to save monsters to access for future use.`}
+
+                    skills = 'Html, Css, Javascript, React.js'
 
                     githubLink = 'https://github.com/Aamsegal/Dnd-Monster-Creator'
 
@@ -112,8 +119,9 @@ class ProjectSection extends Component {
 
                     projectImageAlt = 'Stock Database Photo'
 
-                    paragraph = {`The server for the monster creator has multiple end points for the monster power suggestion, the users, the monsters and monster moves.
-                    (Skills: Javascript, React.js, Express.js, PostgreSQL)`}
+                    paragraph = {`The server for the monster creator has multiple end points for the monster power suggestion, the users, the monsters and monster moves.`}
+
+                    skills = 'Javascript, React.js, Express.js, PostgreSQL'
 
                     githubLink = 'https://github.com/Aamsegal/Dnd-Monster-Creator-Server'
                 />

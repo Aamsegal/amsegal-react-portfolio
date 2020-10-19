@@ -1,17 +1,55 @@
 @media screen and (max-width: 519px) {
-    
+    /*Css for the intro container as a whole*/
+    .intro_container {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    /*container for the paragraph. This includes my name, then the paragraph*/
+    .intro_para_container {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /*Container for just the intro tentence*/
+    .introLine_sentence_Container {
+        font-size: 18px;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 520px) and (max-width: 1024px) {
-    
+    /*Css for the intro container as a whole*/
+    .intro_container {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    /*container for the paragraph. This includes my name, then the paragraph*/
+    .intro_para_container {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /*Container for just the intro tentence*/
+    .introLine_sentence_Container {
+        font-size: 18px;
+        text-align: left;
+    }
 }
 
 @media screen and (min-width: 1025px) {
+    /*Css for the intro container as a whole*/
     .intro_container {
         padding-top: 130px;
         padding-bottom: 160px;
     }
 
+    /*container for the paragraph. This includes my name, then the paragraph*/
     .intro_para_container {
         width: 40%;
         margin-left: auto;
@@ -19,14 +57,9 @@
         text-align: center;
     }
 
+    /*Container for just the intro tentence*/
     .introLine_sentence_Container {
         font-size: 18px;
         text-align: left;
-    }
-
-    .intro_sentence {
-        margin: 0;
-        display: inline-block;
-        margin-left: 5px;
     }
 }

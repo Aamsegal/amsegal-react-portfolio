@@ -12,8 +12,9 @@ class Projects extends Component {
         projectImageAlt: this.props.projectImageAlt,
         projectName: this.props.projectName,
         extraParagraph: this.props.testingExtraInfo,
+        projectSkills: this.props.skills,
         extraImages: this.props.extraImages,
-        componentId: 'extraImagesContainer-' + uuidv4()
+        componentId: 'extraImagesContainer-' + uuidv4(),
     }
     
     componentDidMount() {
@@ -91,6 +92,19 @@ class Projects extends Component {
         }
     }
 
+    checkForSkills = () => {
+        const skills = this.state.projectSkills;
+
+        if(typeof skills !== "undefined") {
+
+            return <div className="skills_container">
+                <p className="skills_header">Skills</p>
+                <p className="skills_list">{this.state.projectSkills}</p>
+            </div>
+
+        }
+    }
+
     render() {
 
         //this.photoSelection();
@@ -106,6 +120,8 @@ class Projects extends Component {
                 </div>
 
                 <p className='portfolio_Piece_Description' >{this.state.paragraph}</p>
+
+                {this.checkForSkills()}
 
                 {this.checkForLinks()}
             </div>

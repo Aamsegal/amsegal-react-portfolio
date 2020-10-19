@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './App.css'
 import ContactInfo from './ContactInfo/ContactInfo'
+
 import ghubIcon from './portfolioImages/githubIcon.png'
 import linkedinIcon from './portfolioImages/linkedin-icon.png'
 import emailIcon from './portfolioImages/email-Icon.png'
+import BurgerIcon from './portfolioImages/BurgerIcon.png'
+
 import Introduction from './introduction/Introduction.js';
+
+
 //import { Link } from 'react-router-dom';
 import ProjectSection from './ProjectSection/ProjectSection'
 
@@ -21,6 +26,8 @@ class App extends Component {
     return(
       <main className = "App">
 
+        {/*this div is used for then photo enlarging when a user click on one of the
+        extra photos that can exists in a project*/}
         <div id="extra-Photo-Enlarge-Blackout">
 
           <div className="extra-Photo-Enlarge-Container">
@@ -39,11 +46,14 @@ class App extends Component {
         portfolio*/}
         <div className='navbar'>
           <h1 className = 'navbar-name'>Aaron Segal</h1>
-            <div className ="navbar-jumpers">
-              {/*<li><a className="jumper" href="#Home">Home</a></li>*/}
-              <a href="#Home" className="jumper-Link">Home</a>
-              <a href="#portfolio_Nav" className="jumper-Link">Projects</a>
-              <a href="#icon-links" className="jumper-Link">Contact</a>
+            <div className="navbar-dropdown">
+              <img src={BurgerIcon} alt='burgerIcon' className="navbar-dropdown-hover"/>
+              <div className ="navbar-jumpers">
+                {/*<li><a className="jumper" href="#Home">Home</a></li>*/}
+                <a href="#Home" className="jumper-Link">Home</a>
+                <a href="#portfolio_Nav" className="jumper-Link">Projects</a>
+                <a href="#icon-links" className="jumper-Link">Contact</a>
+              </div>
             </div>
           
         </div>

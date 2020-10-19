@@ -21,17 +21,18 @@
         text-align: center;
         font-size: 40px;
         text-decoration: underline;
+        margin-bottom: 15px;
     }
 
     .portfolio_Piece_Image {
-        width: 80%;
+        width: 100%;
         text-align: center;
     }
 
     .portfolio_Piece_Description {
         font-size: 16px;
         text-align: left;
-        width: 80%;
+        width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -59,16 +60,25 @@
         width: 23%;
         margin: 1%
     }
+
+    .skills_header {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .skills_list {
+        margin-top: 0;
+    }
 }
 
 @media screen and (min-width: 520px) and (max-width: 1024px) {
     .portfolioPiece {
         text-align: center;
 
-        width: 60%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
-        border-bottom: 3px solid black;
+        border-bottom: 2px solid black;
         padding-bottom: 10px;
     }
 
@@ -76,17 +86,18 @@
         text-align: center;
         font-size: 40px;
         text-decoration: underline;
+        margin-bottom: 15px;
     }
 
     .portfolio_Piece_Image {
-        width: 500px;
+        width: 100%;
         text-align: center;
     }
 
     .portfolio_Piece_Description {
-        font-size: 22px;
+        font-size: 16px;
         text-align: left;
-        width: 80%;
+        width: 90%;
         margin-right: auto;
         margin-left: auto;
     }
@@ -103,6 +114,25 @@
     .divider_paragraph {
         margin-left: 25px;
         margin-right: 25px;
+    }
+
+    .extraImagesContainer {
+        width: 100%;
+    }
+
+    .secondary_Images {
+        display: inline-block;
+        width: 23%;
+        margin: 1%
+    }
+
+    .skills_header {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .skills_list {
+        margin-top: 0;
     }
 }
 
@@ -135,6 +165,17 @@
         width: 80%;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .skills_header {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+
+    .skills_list {
+        margin-top: 0;
     }
 
     .project_link, .divider_paragraph {

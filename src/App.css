@@ -34,10 +34,101 @@
     text-decoration: none;
 }
 
+.navbar-align-right {
+    text-align: left;
+}
+
 @media screen and (max-width: 519px) {
-    .main_content_container {
+    .navbar{
+        box-sizing: border-box;
+        position: fixed;
+        top: 0px;   
+    }
+
+    .navbar-name {
+        font-size: 25px;
+        left: 10%;
+        display: inline;
+    }
+
+    .navbar-dropdown {
+        text-align: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        width: 20%;
+        right: 10%;
+        float: right;
+        width: 25%;
+    }
+
+    .navbar-dropdown-hover {
+        text-align: right;
+        width: 25px;
+        margin: 0;
+    }
+
+    .navbar-jumpers {
+        display: none;
+        text-align: right;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    .jumper-Link {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+        top: 50%;
+        margin-top: 2.5px;
+        margin-bottom: 2.5px;
+        display: block;
+        color: black;
+    }
+
+    .navigation {
+        position: fixed;
+        right: 5%;
+    }
+
+    .main {
+        padding-top: 20px;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .navbar-dropdown:hover .navbar-jumpers{
+        display: block;
+    }
+
+    .jumper-Link:hover {
+        box-shadow: 1px 1px 1px 1px;
+    }
+
+    .extra-Photo-Enlarge-Container {
+        width: 95%;
+        margin-top: 200px;
+        border: 3px solid white;
+        background: #404040;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #extra-Photo-Enlarge-Image {
+        width: 100%;
+        vertical-align: center;
+    }
+
+    .extra-Photo-Enlarge-Exit {
+        text-align: right;
+    }
+
+    .extra-Photo-Enlarge-Exit Button{
+        right: 2.5%;
+        position: fixed;
+        font-weight: bold;
+        font-size: 20px;
+        color: red
     }
 }
 
@@ -54,6 +145,20 @@
         display: inline;
     }
 
+    .navbar-jumpers {
+        display: inline;
+        position: absolute;
+        right: 5%;
+        top: 12.5px;
+    }
+
+    .jumper-Link {
+        font-size: 16px;
+        margin-left: 10px;
+        margin-right: 10px;
+        top: 50%;
+    }
+
     .navigation {
         display: inline;
         position: fixed;
@@ -65,15 +170,41 @@
         padding-right: 15px;
     }
 
-    .navbar a:visited {
-        color: rgb(191, 0, 255);
-    }
-
     .main {
         padding-top: 20px;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .navbar-dropdown-hover {
+        display: none;
+    }
+
+    .extra-Photo-Enlarge-Container {
+        width: 95%;
+        margin-top: 200px;
+        border: 3px solid white;
+        background: #404040;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #extra-Photo-Enlarge-Image {
+        width: 100%;
+        vertical-align: center;
+    }
+
+    .extra-Photo-Enlarge-Exit {
+        text-align: right;
+    }
+
+    .extra-Photo-Enlarge-Exit Button{
+        right: 2.5%;
+        position: fixed;
+        font-weight: bold;
+        font-size: 20px;
+        color: red
     }
     /*Aligns the main section of the webpage to be sentered and only take up 80% of
     of the width of the device*/
@@ -142,5 +273,9 @@
         font-weight: bold;
         font-size: 30px;
         color: red
+    }
+
+    .navbar-dropdown-hover {
+        display: none;
     }
 }
