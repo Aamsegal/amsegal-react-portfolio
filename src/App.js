@@ -82,16 +82,16 @@ class App extends Component {
           {/*Each of the line props sent down and used as a different list element for the introduction*/}
           <Introduction 
 
-                  introLine1 = {`I have a masters in education game design as well as experience in web development.`}
+                  introLine1 = {`I have a master's in education game design as well as experience in web development.`}
 
                   introLine2 = {`I have experience with HTML, CSS, Javascript, 
                   React and Express to the point where I sometimes think in those languages.`}
 
-                  introLine3 ={`I thoroughly enjoy challenges and problem solving in every aspect in my life whether thats beating a boss in a game
-                  , finding out how to make my favorite recipe a little better, or what is causing this bug to break my code....oh a typo.`}
+                  introLine3 ={`I thoroughly enjoy challenges and problem solving in every aspect in my life whether thats beating a boss in a game, 
+                  finding out how to make my favorite recipe a little better, or what is causing this bug to break my code....oh a typo.`}
 
-                  introLine4 = {`I incorporate my love for problem solving with excitement to work with others. Seeing how others work and problem solve
-                  helps open my mind to new ways of thinking and its so exciting to apply those ideas into my everyday life.`}
+                  introLine4 = {`I incorporate my love for problem-solving with excitement to work with others. Seeing how others work and 
+                  problem solve helps open my mind to new ways of thinking and it's so exciting to apply those ideas into my everyday life.`}
               />
             
             <ProjectSection />
@@ -99,11 +99,12 @@ class App extends Component {
             <div className = 'contact'>
 
               <h1 className = "contact_Section_Header">Contact</h1>
-          
+              
+              {/*
               <div className="emailContainer">
                 <p className="email">Amsegal93@gmail.com</p>
               </div>
-
+              */}
               <nav id='icon-links' className='icon-links'/>
 
                 <div className="contactInfoContainer">
@@ -122,14 +123,14 @@ class App extends Component {
                     contactTypeAltImage = 'Github Logo'
                   />
 
-                  {/*
+                  
                   <ContactInfo 
                     contactType = 'Email'
                     contactLink = 'mailto:amsegal93@gmail.com'
                     contactTypeImage = {emailIcon}
                     contactTypeAltImage = 'Email Icon'
                   />
-                  */}
+                  
               </div>
 
             </div>

@@ -54,13 +54,13 @@ class ProjectSection extends Component {
 
                     projectImage = {thisWebsite}
 
-                    projectImageAlt = 'Image of this website. UPDATE THIS WHEN THE WEBSITE IS DONE CSS AND ALL'
+                    projectImageAlt = 'Computer clip art'
 
-                    paragraph = {`This website is developed with React to create modular code that can easily be applied to add to the website. Modular components accept a
-                    variety of different props and render differently depending on which props are present. Pretty weird talking about a website I made 
-                    on the website itself but its a good example of my experience as a developer using different tools.`}
+                    paragraph = {`This website is developed with React to create modular code that can easily be applied to add to the website. 
+                    Modular components accept a variety of different props and render differently depending on which props are present. 
+                    Pretty weird talking about a website I made on the website itself but it's a good example of my experience as a developer using different tools.`}
                     
-                    skills = 'Html, Css, Javascript, React framework'
+                    skills = 'HTML, CSS, Javascript, React framework'
                     
                     githubLink = 'https://github.com/Aamsegal/amsegal-react-portfolio'
                 />
@@ -89,7 +89,7 @@ class ProjectSection extends Component {
                 */}
 
                 <Projects
-                    projectName = 'Whats to Eat!'
+                    projectName = "What's to Eat!"
 
                     projectImage = {whatsToEatImage}
 
@@ -97,11 +97,13 @@ class ProjectSection extends Component {
 
                     extraImages = {whatsToEatExtraImages}
 
-                    paragraph = {`This application helps people find recipes based on their specific needs. Users can search for recipes by choosing ingredients to include/exclude 
-                    and filter out common allergies. If they create an account, they can save and access any recipes that that like for future use. Have some Salmon, Pasta and Garlic?
-                    Maybe 'Smokes Salmon Pasta' is your thing? If not there are many more recipes to access. This website uses the EDAMAM recipe api to access a large variety of recipes.`}
+                    paragraph = {`This application helps people find recipes based on their specific needs. 
+                    Users can search for recipes by choosing ingredients to include/exclude and filter out common allergies. 
+                    If they create an account, they can save and access any recipes that they like for future use. Have some Salmon, Pasta, and Garlic? 
+                    Maybe 'Smoked Salmon Pasta' is your thing? If not there are many more recipes to access. 
+                    This website uses the EDAMAM recipe API to access a large variety of recipes.`}
 
-                    skills = 'Html, Css, Javascript, JQuery'
+                    skills = 'HTML, CSS, Javascript, JQuery'
                     
                     githubLink = 'https://github.com/Aamsegal/WhatsToEat'
 
@@ -109,15 +111,17 @@ class ProjectSection extends Component {
                 />
                 
                 <Projects
-                    projectName = 'Whats to Eat Server'
+                    projectName = "What's to Eat Server"
 
                     projectImage = {whatsToEatServerImage}
 
                     projectImageAlt = 'Cookbook'
 
-                    paragraph = {`The backend logic for the Whats to Eat App. Here we both manage user requests for logging in as well as saving or accessing their recipes.
-                    Users login and receive a login token. When any changes are made to the server, the login token is used to access the users information server side and then 
-                    recipes and ingredients can be connected to a user account keeping a users information on the server so its never sent from front to backend or visa versa.`}
+                    paragraph = {`The backend logic for the What's to Eat App. 
+                    Here we both manage user requests for logging in as well as saving or accessing their recipes. 
+                    Users log in and receive a login token. When any changes are made to the server, the login token is used to access the user's information server-side 
+                    and then recipes and ingredients can be connected to a user account keeping a user's information on the server so it's never sent from front to 
+                    backend or vice versa.`}
 
                     skills = 'Javascript, React.js, Express.js, PostgreSQL'
 
@@ -131,10 +135,11 @@ class ProjectSection extends Component {
 
                     projectImageAlt = 'Screenshot of the application'
 
-                    paragraph = {`This application allows people to create a Dnd Monster. The app provides suggested starting points and renders the stats in a 
-                    clean monster card for users to screen shot if they would like. Users can also create an account and login to save monsters to access for future use.`}
+                    paragraph = {`This application allows people to create a D&d Monster. 
+                    The app provides suggested starting points and renders the stats in a clean monster card for users to screenshot if they would like. 
+                    Users can also create an account and login to save monsters to access for future use.`}
 
-                    skills = 'Html, Css, Javascript, React.js'
+                    skills = 'HTML, CSS, Javascript, React.js'
 
                     githubLink = 'https://github.com/Aamsegal/Dnd-Monster-Creator'
 
@@ -148,7 +153,7 @@ class ProjectSection extends Component {
 
                     projectImageAlt = 'Stock Database Photo'
 
-                    paragraph = {`The server for the monster creator has multiple end points for the monster power suggestion, the users, the monsters and monster moves.`}
+                    paragraph = {`The server for the monster creator has multiple endpoints for the monster power suggestion, users, monsters, and their moves.`}
 
                     skills = 'Javascript, React.js, Express.js, PostgreSQL'
 
@@ -164,11 +169,9 @@ class ProjectSection extends Component {
 
                     extraImages = {escapeRoomExtraImages}
 
-                    paragraph = {`Worked with a team of 10+ to design, create and run an escape room at our school for a weekend. I worked on 
-                    three aspects of the escape room. I helped write the story, design and create the set and I was the lead on the puzzle team which
-                    created fun and interactive puzzles that allowed the players to progress through the room.`}
-                
-                    testingExtraInfo = "Holy crap all 4 work thats wild"
+                    paragraph = {`Worked with a team of 10+ to design, create, and run an escape room at our school for a weekend. I worked on three aspects of the escape room. 
+                    I helped write the story, design and create the set and I was the lead on the puzzle team which created fun and interactive puzzles that allowed the 
+                    players to progress through the room.`}
                 />
 
                 <Projects
@@ -176,15 +179,13 @@ class ProjectSection extends Component {
 
                     projectImage = {theBlackDogCombat}
 
-                    projectImageAlt = "./portfolioImages/theBlackDogCombat.png"
+                    projectImageAlt = "Screenshot from 'The Black Dog' game"
 
-                    paragraph = {`As the lead for the project, I worked with 3 undergraduate students do develop a game to teach and
-                    raise awareness about depression. The player controls a character as they are taking a course about mental health. 
-                    As they learn more, they need to apply what they learn in combat against a physical manifestation of depression in
-                    the game. They use moves to combat the enemies that are related to methods to help combat depression such as 
-                    "papaya punch" for healthy eating or "Snooze" for the importance of a consistent sleep schedule.`}
-                
-                    testingExtraInfo = "The 5th one is working"
+                    paragraph = {`As the lead for the project, I worked with 3 undergraduate students to develop a game to teach and raise awareness about depression. 
+                    The player controls a character as they are taking a course about mental health. 
+                    As they learn more, they need to apply what they learn in combat against a physical manifestation of depression in the game. 
+                    They use moves to combat the enemies that are related to methods to help combat depression such as "papaya punch" for healthy eating or 
+                    "Snooze" for the importance of a consistent sleep schedule.`}
                 />
 
                 {/*In this situation, if both githubLink and demo link are N/a, the links wont render because of an if statement in the component*/}
