@@ -21,6 +21,15 @@ class App extends Component {
     document.getElementById("extra-Photo-Enlarge-Blackout").style.display = "none";
   }
 
+  mobileBurgerMenu(displayCondition) {
+    
+    if(displayCondition === 'show') {
+      document.getElementById("navbar-jumpers-mobile").style.display = "block";
+    }else if(displayCondition === 'hide') {
+      document.getElementById("navbar-jumpers-mobile").style.display = "none";
+    }
+  }
+
   render() {
 
     return(
@@ -36,7 +45,9 @@ class App extends Component {
               <button onClick={() => this.hideExtraImageContainer()}>X</button>
             </div>
             
-            <img id="extra-Photo-Enlarge-Image" alt="current enlarged"src=''></img>
+            <div className="extraPhotoImageContainer">
+              <img id="extra-Photo-Enlarge-Image" alt="current enlarged"src=''></img>
+            </div>
           </div>
             
         </div>
@@ -47,12 +58,18 @@ class App extends Component {
         <div className='navbar'>
           <h1 className = 'navbar-name'>Aaron Segal</h1>
             <div className="navbar-dropdown">
-              <img src={BurgerIcon} alt='burgerIcon' className="navbar-dropdown-hover"/>
+              <img src={BurgerIcon} alt='burgerIcon' className="navbar-dropdown-hover" onClick={() => this.mobileBurgerMenu('show')}/>
               <div className ="navbar-jumpers">
                 {/*<li><a className="jumper" href="#Home">Home</a></li>*/}
                 <a href="#Home" className="jumper-Link">Home</a>
                 <a href="#portfolio_Nav" className="jumper-Link">Projects</a>
                 <a href="#icon-links" className="jumper-Link">Contact</a>
+              </div>
+
+              <div className="navbar-jumpers-mobile" id="navbar-jumpers-mobile">
+                <a href="#Home" className="jumper-Link" onClick={() => this.mobileBurgerMenu('hide')}>Home</a>
+                <a href="#portfolio_Nav" className="jumper-Link" onClick={() => this.mobileBurgerMenu('hide')}>Projects</a>
+                <a href="#icon-links" className="jumper-Link" onClick={() => this.mobileBurgerMenu('hide')}>Contact</a>
               </div>
             </div>
           
@@ -65,14 +82,16 @@ class App extends Component {
           {/*Each of the line props sent down and used as a different list element for the introduction*/}
           <Introduction 
 
-                  introLine1 = 'I like games, writing, cooking and dogs, all dogs.'
+                  introLine1 = {`I have a masters in education game design as well as experience in web development.`}
 
                   introLine2 = {`I have experience with HTML, CSS, Javascript, 
                   React and Express to the point where I sometimes think in those languages.`}
 
-                  introLine3 ='I have worked on more group projects than I can remember, so working with people is both enjoyable, and second nature.'
+                  introLine3 ={`I thoroughly enjoy challenges and problem solving in every aspect in my life whether thats beating a boss in a game
+                  , finding out how to make my favorite recipe a little better, or what is causing this bug to break my code....oh a typo.`}
 
-                  introLine4 = 'I want to design games to teach and one day I would like to combine those two loves together.'
+                  introLine4 = {`I incorporate my love for problem solving with excitement to work with others. Seeing how others work and problem solve
+                  helps open my mind to new ways of thinking and its so exciting to apply those ideas into my everyday life.`}
               />
             
             <ProjectSection />
@@ -80,29 +99,38 @@ class App extends Component {
             <div className = 'contact'>
 
               <h1 className = "contact_Section_Header">Contact</h1>
+          
+              <div className="emailContainer">
+                <p className="email">Amsegal93@gmail.com</p>
+              </div>
 
               <nav id='icon-links' className='icon-links'/>
-              
-                <ContactInfo 
-                  contactType = 'Linked In'
-                  contactLink = 'https://www.linkedin.com/in/developeramsegal/'
-                  contactTypeImage = {linkedinIcon}
-                  contactTypeAltImage = 'Linked in Logo' 
-                />
 
-                <ContactInfo 
-                  contactType = "Github"
-                  contactLink = 'https://github.com/Aamsegal'
-                  contactTypeImage = {ghubIcon}
-                  contactTypeAltImage = 'Github Logo'
-                />
+                <div className="contactInfoContainer">
 
-                <ContactInfo 
-                  contactType = 'Email'
-                  contactLink = 'mailto:amsegal93@gmail.com'
-                  contactTypeImage = {emailIcon}
-                  contactTypeAltImage = 'Email Icon'
-                />
+                  <ContactInfo 
+                    contactType = 'Linked In'
+                    contactLink = 'https://www.linkedin.com/in/developeramsegal/'
+                    contactTypeImage = {linkedinIcon}
+                    contactTypeAltImage = 'Linked in Logo' 
+                  />
+
+                  <ContactInfo 
+                    contactType = "Github"
+                    contactLink = 'https://github.com/Aamsegal'
+                    contactTypeImage = {ghubIcon}
+                    contactTypeAltImage = 'Github Logo'
+                  />
+
+                  {/*
+                  <ContactInfo 
+                    contactType = 'Email'
+                    contactLink = 'mailto:amsegal93@gmail.com'
+                    contactTypeImage = {emailIcon}
+                    contactTypeAltImage = 'Email Icon'
+                  />
+                  */}
+              </div>
 
             </div>
 

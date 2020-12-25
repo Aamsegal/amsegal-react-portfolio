@@ -25,6 +25,7 @@ class Projects extends Component {
 
             for(let i = 0; i < extraImages.length; i++) {
 
+                //  renderPhoto() function is defined in index.html
                 extraImageHtml += `<img class='secondary_Images' src='${extraImages[i].image}' alt='${extraImages[i].altText}' onclick="renderPhoto(this)"></img>`;
             }
                
@@ -36,11 +37,6 @@ class Projects extends Component {
 
         
         document.getElementById(this.state.componentId).innerHTML = extraImageHtml;
-
-    }
-
-    photoSelection() {
-
     }
 
     checkForLinks = () => {
@@ -98,7 +94,7 @@ class Projects extends Component {
         if(typeof skills !== "undefined") {
 
             return <div className="skills_container">
-                <p className="skills_header">Skills</p>
+                <h2 className="skills_header">Skills</h2>
                 <p className="skills_list">{this.state.projectSkills}</p>
             </div>
 
@@ -116,7 +112,7 @@ class Projects extends Component {
                 {this.checkForImage()}
 
                 <div className="extraImagesContainer" id={this.state.componentId}>
-                    
+
                 </div>
 
                 <p className='portfolio_Piece_Description' >{this.state.paragraph}</p>
