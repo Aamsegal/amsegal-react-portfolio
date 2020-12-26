@@ -72,7 +72,7 @@
 
     .extra-Photo-Enlarge-Container {
         width: 95%;
-        margin-top: 20%;
+        margin-top: 25%;
         border: 3px solid white;
         background: #404040;
         margin-left: auto;
@@ -81,6 +81,9 @@
 
     #extra-Photo-Enlarge-Image {
         max-width: 100%;
+        max-height: 500px;
+        height: auto;
+        width: auto;
         vertical-align: center;
     }
 
@@ -94,6 +97,10 @@
         font-weight: bold;
         font-size: 20px;
         color: red
+    }
+
+    .extraPhotoImageContainer{
+        max-height: 80%;
     }
 }
 
@@ -258,6 +265,7 @@
         background: #404040;
         margin-left: auto;
         margin-right: auto;
+        margin-top: 100px;
     }
 
     #extra-Photo-Enlarge-Image {

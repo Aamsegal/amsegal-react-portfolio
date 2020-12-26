@@ -130,7 +130,8 @@ class ProjectSection extends Component {
 
                     projectImageAlt = 'Stock Database Photo'
 
-                    paragraph = {`The server for the monster creator has multiple endpoints for the monster power suggestion, users, monsters, and their moves.`}
+                    paragraph = {`This is the server and database that stores users saved monsters. This server has multiple endpoints for the monster power suggestion, 
+                    users, monsters, and their moves. The user can edit their monster's information if they find issues or want to change aspects of it at a later point. `}
 
                     skills = 'Javascript, React.js, Express.js, PostgreSQL'
 
@@ -146,9 +147,9 @@ class ProjectSection extends Component {
 
                     extraImages = {escapeRoomExtraImages}
 
-                    paragraph = {`Worked with a team of 10+ to design, create, and run an escape room at our school for a weekend. I worked on three aspects of the escape room. 
-                    I helped write the story, design and create the set and I was the lead on the puzzle team which created fun and interactive puzzles that allowed the 
-                    players to progress through the room.`}
+                    paragraph = {`I worked with a team of 10+ to design, create, and run an escape room at our school for a weekend. 
+                    I worked on three aspects of the escape room. I helped write the story, design, and create the set. 
+                    I was also the lead on the puzzle team which created fun and interactive puzzles that allowed the players to progress through the room.`}
                 />
 
                 <Projects
