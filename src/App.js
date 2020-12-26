@@ -84,14 +84,13 @@ class App extends Component {
 
                   introLine1 = {`I have a master's in education game design as well as experience in web development.`}
 
-                  introLine2 = {`I have experience with HTML, CSS, Javascript, 
-                  React and Express to the point where I sometimes think in those languages.`}
+                  introLine2 = {`I have experience with HTML, CSS, Javascript, React, and Express to the point where I sometimes think in those languages.`}
 
-                  introLine3 ={`I thoroughly enjoy challenges and problem solving in every aspect in my life whether thats beating a boss in a game, 
+                  introLine3 ={`I thoroughly enjoy challenges and problem-solving in every aspect of my life whether that's beating a boss in a game, 
                   finding out how to make my favorite recipe a little better, or what is causing this bug to break my code....oh a typo.`}
 
-                  introLine4 = {`I incorporate my love for problem-solving with excitement to work with others. Seeing how others work and 
-                  problem solve helps open my mind to new ways of thinking and it's so exciting to apply those ideas into my everyday life.`}
+                  introLine4 = {`I incorporate my love for problem-solving with excitement to work with others. Seeing how others work and problem 
+                  solve helps open my mind to new ways of thinking and I love getting to apply those ideas into my everyday life.`}
               />
             
             <ProjectSection />

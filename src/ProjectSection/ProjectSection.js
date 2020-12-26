@@ -56,37 +56,15 @@ class ProjectSection extends Component {
 
                     projectImageAlt = 'Computer clip art'
 
-                    paragraph = {`This website is developed with React to create modular code that can easily be applied to add to the website. 
-                    Modular components accept a variety of different props and render differently depending on which props are present. 
-                    Pretty weird talking about a website I made on the website itself but it's a good example of my experience as a developer using different tools.`}
+                    paragraph = {`This website is developed with React to create modular code that can easily be applied to 
+                    add more projects or experiences to the website. Modular components accept a variety of different props 
+                    and render differently depending on which props are present. Pretty weird talking about a website I made 
+                    on the website itself, but it's a good example of my experience as a developer using different tools.`}
                     
                     skills = 'HTML, CSS, Javascript, React framework'
                     
                     githubLink = 'https://github.com/Aamsegal/amsegal-react-portfolio'
                 />
-
-                {/*This called the project component and sends all the info for the project
-                with props. Name, image, altImage, paragraph, githublink and the demo are
-                all passed down and then used to create html based on the props*/}
-                
-                {/*
-                <Projects
-                    projectName = 'Web Quiz'
-
-                    projectImage = {quizAppImage}
-
-                    projectImageAlt = 'Quiz website screenshot'
-
-                    paragraph = {`Animal quiz questions and answers are from a Javascript object. 
-                    App keeps track of the users answers and gives them live feedback as to if the answer was right or wrong.`}
-
-                    skills = 'Html, Css, Javascript, Jquery'
-                    
-                    githubLink = 'https://github.com/Aamsegal/quizStartingPage'
-
-                    demo = 'https://aamsegal.github.io/quizStartingPage/index.html'
-                />
-                */}
 
                 <Projects
                     projectName = "What's to Eat!"
@@ -99,8 +77,8 @@ class ProjectSection extends Component {
 
                     paragraph = {`This application helps people find recipes based on their specific needs. 
                     Users can search for recipes by choosing ingredients to include/exclude and filter out common allergies. 
-                    If they create an account, they can save and access any recipes that they like for future use. Have some Salmon, Pasta, and Garlic? 
-                    Maybe 'Smoked Salmon Pasta' is your thing? If not there are many more recipes to access. 
+                    If they create an account, they can save and access any recipes they like for future use. Have some Salmon, Pasta, and Garlic? 
+                    Maybe 'Smoked Salmon Pasta' is your thing? If not, there are many more recipes to access. 
                     This website uses the EDAMAM recipe API to access a large variety of recipes.`}
 
                     skills = 'HTML, CSS, Javascript, JQuery'
@@ -117,11 +95,10 @@ class ProjectSection extends Component {
 
                     projectImageAlt = 'Cookbook'
 
-                    paragraph = {`The backend logic for the What's to Eat App. 
-                    Here we both manage user requests for logging in as well as saving or accessing their recipes. 
-                    Users log in and receive a login token. When any changes are made to the server, the login token is used to access the user's information server-side 
-                    and then recipes and ingredients can be connected to a user account keeping a user's information on the server so it's never sent from front to 
-                    backend or vice versa.`}
+                    paragraph = {`The backend logic for the What's to Eat App. Here we both manage user requests for logging in as well as saving or accessing their recipes. 
+                    Users log in and receive a login token. When any changes are made to the server, the login token is used to access the user's information server-side. 
+                    Then, recipes and ingredients can be connected to a user account keeping the user's information on the server so it's never sent from front to backend or 
+                    vice versa.`}
 
                     skills = 'Javascript, React.js, Express.js, PostgreSQL'
 
