@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import './App.css'
-import ContactInfo from './ContactInfo/ContactInfo'
+import ContactInfo from './Version_One/ContactInfo/ContactInfo'
 
-import ghubIcon from './portfolioImages/githubIcon.png'
-import linkedinIcon from './portfolioImages/linkedin-icon.png'
-import emailIcon from './portfolioImages/email-Icon.png'
-import BurgerIcon from './portfolioImages/BurgerIcon.png'
+import ghubIcon from './Version_One/portfolioImages/githubIcon.png'
+import linkedinIcon from './Version_One/portfolioImages/linkedin-icon.png'
+import emailIcon from './Version_One/portfolioImages/email-Icon.png'
+import BurgerIcon from './Version_One/portfolioImages/BurgerIcon.png'
 
-import Introduction from './introduction/Introduction.js';
+import Introduction from './Version_One/introduction/Introduction.js';
 
 
 //import { Link } from 'react-router-dom';
-import ProjectSection from './ProjectSection/ProjectSection'
+import ProjectSection from './Version_One/ProjectSection/ProjectSection.js'
 
 
 
-class App extends Component {
+class AppVersionOne extends Component {
 
   hideExtraImageContainer() {
     document.getElementById("extra-Photo-Enlarge-Blackout").style.display = "none";
@@ -141,4 +141,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AppVersionOne;

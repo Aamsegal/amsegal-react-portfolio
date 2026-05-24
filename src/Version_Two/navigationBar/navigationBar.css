@@ -1,0 +1,52 @@
+:root {
+    --core-purple: #59138b;
+    --accent-purple: #B19CD9;
+    --primary-blue: #1E90FF;
+    --secondary-cyan: #00CED1;
+    --neutral-coolGray: #A9A9A9;
+    --highlight-mint: #98FF98;
+    --background-iceBlue: #E0FFFF;
+    --text-darkSlateBlue: #483D8B;
+}
+
+.navBarContainer{
+    background-color: var(--core-purple);
+}
+
+.dropDownNavBar{
+    display: flex;
+    gap: 10px;
+}
+
+.navBarButton{
+    margin: 0;
+    color: var(--background-iceBlue);
+    font-weight: bold;
+}
+
+.burgerIcon {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position:absolute
+}
+
+/* css for screens larger than 600px */
+@media (min-width: 450px) {
+
+    .dropDownNavBar{
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 451px) {
+
+    .dropDownNavBar{
+        flex-direction: row;
+        padding-left: 20px;
+    }
+
+}
+

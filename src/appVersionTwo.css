@@ -1,0 +1,21 @@
+.mainAppContainer{
+    display: flex;
+}
+
+/* smaller than 451px width */
+@media (max-width: 451px) {
+
+    .mainAppContainer{
+        flex-direction: column;
+    }
+
+}
+ 
+/* larger than 450px width */
+@media (min-width: 450px) {
+
+    .mainAppContainer{
+        flex-direction: row;
+    }
+
+}
